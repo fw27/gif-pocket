@@ -1,5 +1,5 @@
 {
-    "name": "fw-ext/gif-picker",
+    "name": "fw27/gif-pocket",
     "description": "A GIF picker for Flarum.",
     "keywords": [
         "flarum"
@@ -12,7 +12,7 @@
     },
     "authors": [
         {
-            "name": "FwExt Team",
+            "name": "fw27Team",
             "email": "dev@fwext.local"
         }
     ],
@@ -23,7 +23,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Gif Picker",
+            "title": "Gif Pocket",
             "category": "",
             "icon": {
                 "name": "",
