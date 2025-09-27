@@ -9,13 +9,13 @@ A [Flarum](https://flarum.org) extension. A GIF picker for Flarum.
 Install with composer:
 
 ```sh
-composer require fw-ext/gif-picker:"*"
+composer require fw27/gif-pocket:"*"
 ```
 
 ## Updating
 
 ```sh
-composer update fw-ext/gif-picker:"*"
+composer update fw27/gif-pocket:"*"
 php flarum migrate
 php flarum cache:clear
 ```
@@ -23,5 +23,4 @@ php flarum cache:clear
 ## Links
 
 - [Packagist](https://packagist.org/packages/fw-ext/gif-picker)
-- [GitHub](https://github.com/fw-ext/gif-picker)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [GitHub](https://github.com/fw27)
