@@ -1,0 +1,104 @@
+fw-ext-gif-picker:
+  forum:
+    gif_picker_button:
+      title: "GIF Pocket"
+    gif_picker_modal:
+      title: "Choose a GIF"
+      global_gifs_tab: "Global GIFs"
+      personal_gifs_tab: "Personal GIFs"
+      loading: "Loading..."
+      image_alt_global: "Global GIF preview"
+      image_alt_personal: "Personal GIF preview"
+      category_label: "Category: {category}"
+      form:
+        title_placeholder: "Title"
+        category_placeholder: "Category (optional)"
+        url_placeholder: "GIF URL"
+        add_button: "Add GIF"
+        update_button: "Update GIF"
+        cancel_button: "Cancel"
+        delete_button: "Delete GIF"
+        untitled: "Untitled"
+      filters:
+        aria_label: "Filter GIFs by category"
+        show_everything: "Show Everything"
+        uncategorized: "Uncategorized"
+      empty:
+        global: "No global GIFs found for this category yet."
+        personal: "You haven't added any personal GIFs for this category yet."
+      actions:
+        edit: "Edit GIF"
+        delete: "Delete GIF"
+  admin:
+    management:
+      add_heading: "Add New Global GIF"
+      list_heading: "Existing Global GIFs"
+      loading: "Loading GIFs..."
+      empty: "No GIFs have been added yet."
+      load_error: "Failed to load global GIFs. Please try again."
+      delete_error: "Failed to delete the selected GIF."
+      fields:
+        title_label: "Title"
+        title_placeholder: "Enter a descriptive title"
+        category_label: "Category"
+        category_placeholder: "Category (optional)"
+        url_label: "GIF URL"
+        url_placeholder: "https://example.com/my-gif.gif"
+        submit_button: "Add GIF"
+        update_button: "Update GIF"
+        cancel_button: "Cancel"
+        url_required: "Please provide a GIF URL before saving."
+      table:
+        title: "Title"
+        category: "Category"
+        preview: "Preview"
+        actions: "Actions"
+        untitled: "Untitled"
+        category_empty: "Uncategorized"
+        empty: "No GIFs found for this category yet."
+      actions:
+        edit: "Edit"
+        delete: "Delete"
+      update_error: "Failed to update the selected GIF."
+
+askvortsov-rich-text:
+  admin:
+    settings:
+      toggle_on_editor: Show rich text mode toggle on editor?
+  lib:
+    composer:
+      toggle_button: Toggle Rich Text Mode
+      insert_button: Insert
+      insert_image:
+        src_placeholder: Link
+        title_placeholder: Title
+      insert_link:
+        text_placeholder: Text
+        href_placeholder: URL
+        title_placeholder: Title (shows on hover)
+        remove_button: Remove
+      additional_items_tooltip: Additional Controls
+      bold_tooltip: Bold text <{modifierKey}-b>
+      code_tooltip: Inline code <{modifierKey}-`>
+      code_block_tooltip: Insert a code block
+      header_tooltip: Change to header {level} <shift-{modifierKey}-{level}>
+      horizontal_rule_tooltip: Insert horizontal rule
+      image_tooltip: Add an image
+      italic_tooltip: Italic text <{modifierKey}-i>
+      link_tooltip: Add a link
+      ordered_list_tooltip: Numbered list <shift-{modifierKey}-9>
+      paragraph_tooltip: Change to paragraph <shift-{modifierKey}-0>
+      quote_tooltip: Insert a quote <{modifierKey}-q>
+      spoiler_block_tooltip: Block Spoiler/Dropdown
+      spoiler_inline_tooltip: Spoiler  <{modifierKey}-;>
+      strike_tooltip: Strikethrough <alt-shift-5>
+      sub_tooltip: Subscript <{modifierKey}-,>
+      sup_tooltip: Superscript <{modifierKey}-.>
+      text_type_tooltip: Select Text Type
+      unordered_list_tooltip: Bulleted list <shift-{modifierKey}-8>
+
+  forum:
+    settings:
+      composer_heading: Composer
+      use_rich_text_editor_label: Use rich text editor?
+      rich_text_compact_paragraphs_label: Don't separate paragraphs with newline.

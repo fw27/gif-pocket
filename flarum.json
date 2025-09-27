@@ -1,0 +1,18 @@
+{
+  "name": "fw-ext/gif-picker",
+  "title": "Gif Picker",
+  "description": "A GIF picker for Flarum.",
+  "license": "MIT",
+  "namespace": "FwExt\\GifPicker",
+  "packageManager": "yarn",
+  "extra": {
+    "flarum-extension": {
+      "title": "Gif Picker",
+      "icon": {
+        "name": "fas fa-gift",
+        "backgroundColor": "#e74c3c",
+        "color": "#fff"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@fw-ext/gif-picker": "file:.."
+  }
+}
