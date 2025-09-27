@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of fw-ext/gif-picker.
+ * This file is part of fw27/gif-pocket.
  *
  * Copyright (c) 2025 .
  *

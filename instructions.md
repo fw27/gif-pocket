@@ -1,7 +1,7 @@
 🎯 Goal 
  Build a Flarum 1.8.10 extension  that adds a GIF picker button  to the composer (the textarea where users write posts/replies). We'll build this extension inside our flarum hosted on our xampp environment (C:\xampp\htdocs\flarum_test\extensions). 
- Folders fw-ext\gif-picker have already been created. 
- 
+ Folders fw27\gif-pocket have already been created. 
+
  Information about it: 
  When a logged-in user clicks the new button: 
  A panel opens showing two tabs : 
@@ -11,16 +11,16 @@
  All GIFs are stored by URL only  (not uploaded to the server). 
  Personal GIFs require storing user–GIF relationships in the database; global GIFs are stored once. 
  Later you can add a preview of the GIFs  inside the composer so it feels seamless. 
- 
+
  🔧 Stack 
  Flarum extension  (PHP + JS) 
  PHP backend  for settings, permissions, API endpoints (to load/save GIFs) 
- Frontend  in TypeScript using Flarum’s Mithril.js framework 
- Data stored via Flarum’s Eloquent models & migrations 
- 
+ Frontend  in TypeScript using Flarum's Mithril.js framework 
+ Data stored via Flarum's Eloquent models & migrations 
+
  📝 Implementation Plan 
  Extension Skeleton 
- Create a folder extensions/fw-ext/gif-picker 
+ Create a folder extensions/fw27/gif-pocket 
  Use flarum-cli init .  inside that folder to generate the boilerplate 
  Choose MIT license, namespace FwExt\GifPicker , package manager Yarn 
  Backend 
@@ -38,7 +38,7 @@
  Build 
  yarn install 
  yarn build  or yarn watch 
- php flarum extensions:enable fw-ext-gif-picker 
+ php flarum extensions:enable fw27-gif-pocket 
  Test in your dev forum 
  Admin 
  Add an admin settings page (later) for managing global GIFs.

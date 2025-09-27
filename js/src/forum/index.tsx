@@ -10,13 +10,13 @@ import applyEditor from '../common/applyEditor';
 import addPreferences from './addPreferences';
 import GifContextMenu from './components/GifContextMenu';
 
-app.initializers.add('fw-ext-gif-picker', () => {
-  console.log('[fw-ext/gif-picker] Forum initializer started');
+app.initializers.add('fw27-gif-pocket', () => {
+  console.log('[fw27/gif-pocket] Forum initializer started');
   
   app.store.models['global-gifs'] = GlobalGif;
   app.store.models['personal-gifs'] = PersonalGif;
   
-  console.log('[fw-ext/gif-picker] Models registered');
+  console.log('[fw27/gif-pocket] Models registered');
 
   // Apply rich text editor functionality
   addPreferences();
@@ -41,14 +41,14 @@ app.initializers.add('fw-ext-gif-picker', () => {
     }
     
     // Check if button already exists to prevent duplicates
-    if (items.toArray().some(item => item && item.key === 'fw-ext-gif-picker')) {
+    if (items.toArray().some(item => item && item.key === 'fw27-gif-pocket')) {
       console.log('[DEBUG] Forum index.tsx - GIF picker already exists, skipping');
       return;
     }
     
     console.log('[DEBUG] Forum index.tsx - Adding GIF picker button');
     items.add(
-      'fw-ext-gif-picker',
+      'fw27-gif-pocket',
       <GifPickerButton composer={(this as any).attrs.composer} />
     );
     
@@ -76,7 +76,7 @@ app.initializers.add('fw-ext-gif-picker', () => {
   // Add GIF context menu functionality
   setupGifContextMenu();
   
-  console.log('[fw-ext/gif-picker] Forum initialization complete');
+  console.log('[fw27/gif-pocket] Forum initialization complete');
 });
 
 // Function to set up GIF context menu

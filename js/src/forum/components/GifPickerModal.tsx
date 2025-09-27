@@ -59,7 +59,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
   }
 
   title() {
-    return String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.title'));
+    return String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.title'));
   }
 
   content() {
@@ -71,14 +71,14 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
             onclick={() => this.switchTab('global')}
             aria-controls="global-gif-panel"
           >
-            {String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.global_gifs_tab'))}
+            {String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.global_gifs_tab'))}
           </Button>
           <Button
             className={`TabButton ${this.activeTab === 'personal' ? 'active' : ''}`}
             onclick={() => this.switchTab('personal')}
             aria-controls="personal-gif-panel"
           >
-            {String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.personal_gifs_tab'))}
+            {String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.personal_gifs_tab'))}
           </Button>
         </div>
         <div className="TabContent">
@@ -90,7 +90,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
 
   globalGifList() {
     if (this.loading && !this.globalGifs.length) {
-      return <div className="GifLoading">{String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.loading'))}</div>;
+      return <div className="GifLoading">{String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.loading'))}</div>;
     }
 
     const gifs = this.globalGifs;
@@ -107,11 +107,11 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
                 <img
                   src={String(gif.url())}
                   onclick={() => this.selectGif(String(gif.url()))}
-                  alt={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.image_alt_global'))}
+                  alt={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.image_alt_global'))}
                   className="GifThumbnail"
                   loading="lazy"
                 />
-                <div className="GifTitle">{gif.title ? String(gif.title()) : String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.untitled'))}</div>
+                <div className="GifTitle">{gif.title ? String(gif.title()) : String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.untitled'))}</div>
                 <div className="GifCategoryLabel">{this.getCategoryLabel(gif)}</div>
               </div>
             ))}
@@ -123,7 +123,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
 
   personalGifManager() {
     if (this.loading && !this.personalGifs.length) {
-      return <div className="GifLoading">{app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.loading')}</div>;
+      return <div className="GifLoading">{app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.loading')}</div>;
     }
 
     return (
@@ -131,19 +131,19 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
         <div className="Form-group">
           <input
             className="FormControl"
-            placeholder={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.title_placeholder'))}
+            placeholder={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.title_placeholder'))}
             value={this.newPersonalGif.title()}
             oninput={(e: Event) => this.newPersonalGif.title((e.target as HTMLInputElement).value)}
           />
           <input
             className="FormControl"
-            placeholder={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.category_placeholder'))}
+            placeholder={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.category_placeholder'))}
             value={this.newPersonalGif.category()}
             oninput={(e: Event) => this.newPersonalGif.category((e.target as HTMLInputElement).value)}
           />
           <input
             className="FormControl"
-            placeholder={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.url_placeholder'))}
+            placeholder={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.url_placeholder'))}
             value={this.newPersonalGif.url()}
             oninput={(e: Event) => this.newPersonalGif.url((e.target as HTMLInputElement).value)}
           />
@@ -155,13 +155,13 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
                   onclick={() => this.updatePersonalGif()}
                   loading={this.loading}
                 >
-                  {String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.update_button'))}
+                  {String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.update_button'))}
                 </Button>
                 <Button
                   className="Button"
                   onclick={() => this.cancelEdit()}
                 >
-                  {String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.cancel_button'))}
+                  {String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.cancel_button'))}
                 </Button>
               </>
             ) : (
@@ -170,7 +170,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
                 onclick={() => this.addPersonalGif()}
                 loading={this.loading}
               >
-                {String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.add_button'))}
+                {String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.add_button'))}
               </Button>
             )}
           </div>
@@ -185,24 +185,24 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
                 <img
                   src={String(gif.url())}
                   onclick={() => this.selectGif(String(gif.url()))}
-                  alt={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.image_alt_personal'))}
+                  alt={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.image_alt_personal'))}
                   className="GifThumbnail"
                   loading="lazy"
                 />
-                <div className="GifTitle">{gif.title ? String(gif.title()) : app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.form.untitled')}</div>
+                <div className="GifTitle">{gif.title ? String(gif.title()) : app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.form.untitled')}</div>
                 <div className="GifCategoryLabel">{this.getCategoryLabel(gif)}</div>
                 <div className="GifActions">
                   <Button
                     className="Button Button--icon Button--link"
                     icon="fas fa-edit"
                     onclick={() => this.editPersonalGif(gif)}
-                    title={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.actions.edit'))}
+                    title={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.actions.edit'))}
                   />
                   <Button
                     className="Button Button--icon Button--link Button--danger"
                     icon="fas fa-trash"
                     onclick={() => this.deletePersonalGif(String(gif.id() || ''))}
-                    title={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.actions.delete'))}
+                    title={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.actions.delete'))}
                     loading={this.loading}
                   />
                 </div>
@@ -352,7 +352,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
       url: this.newPersonalGif.url(),
       category: this.normalizeCategory(this.newPersonalGif.category()),
     }).then(() => {
-      console.log('[fw-ext/gif-picker] Successfully updated personal GIF');
+      console.log('[fw27/gif-pocket] Successfully updated personal GIF');
       this.cancelEdit();
       this.loadPersonalGifs().then((personalGifs) => {
         this.personalGifs = personalGifs;
@@ -379,7 +379,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
       });
     }).then(() => {
       if (this.editingGif) { // Only if not already handled above
-        console.log('[fw-ext/gif-picker] Successfully updated personal GIF with manual request');
+        console.log('[fw27/gif-pocket] Successfully updated personal GIF with manual request');
         this.cancelEdit();
         this.loadPersonalGifs().then((personalGifs) => {
           this.personalGifs = personalGifs;
@@ -475,7 +475,7 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
       <div
         className="GifCategoryFilters"
         role="toolbar"
-        aria-label={String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.filters.aria_label'))}
+        aria-label={String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.filters.aria_label'))}
       >
         {options.map((option) => {
           const isActive = option.value === activeFilter;
@@ -521,14 +521,14 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
     const options: { value: string; label: string }[] = [
       {
         value: ALL_CATEGORIES_VALUE,
-        label: String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.filters.show_everything')),
+        label: String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.filters.show_everything')),
       },
     ];
 
     if (hasUncategorized || activeFilter === UNCATEGORIZED_VALUE) {
       options.push({
         value: UNCATEGORIZED_VALUE,
-        label: String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.filters.uncategorized')),
+        label: String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.filters.uncategorized')),
       });
     }
 
@@ -544,8 +544,8 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
   renderEmptyState(scope: 'global' | 'personal') {
     const key =
       scope === 'global'
-        ? 'fw-ext-gif-picker.forum.gif_picker_modal.empty.global'
-        : 'fw-ext-gif-picker.forum.gif_picker_modal.empty.personal';
+        ? 'fw27-gif-pocket.forum.gif_picker_modal.empty.global'
+        : 'fw27-gif-pocket.forum.gif_picker_modal.empty.personal';
 
     return (
       <div className="GifEmptyState">
@@ -563,14 +563,14 @@ export default class GifPickerModal extends Modal<IGifPickerModalAttrs> {
 
       if (normalized !== '') {
         return String(
-          app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.category_label', {
+          app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.category_label', {
             category: normalized,
           })
         );
       }
     }
 
-    return String(app.translator.trans('fw-ext-gif-picker.forum.gif_picker_modal.filters.uncategorized'));
+    return String(app.translator.trans('fw27-gif-pocket.forum.gif_picker_modal.filters.uncategorized'));
   }
 
   normalizeCategory(category: string | null | undefined) {

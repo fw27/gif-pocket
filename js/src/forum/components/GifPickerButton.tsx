@@ -12,13 +12,13 @@ const TOOLTIP_TEXT = 'GIF Pocket';
 
 export default class GifPickerButton extends Component<IGifPickerButtonAttrs> {
   view() {
-    console.debug('[fw-ext/gif-picker] Rendering GIF Pocket button with tooltip', {
+    console.debug('[fw27/gif-pocket] Rendering GIF Pocket button with tooltip', {
       tooltip: TOOLTIP_TEXT,
     });
 
     return (
       <Button
-        className="Button Button--icon Button--link fw-ext-gif-picker"
+        className="Button Button--icon Button--link fw27-gif-pocket"
         icon="fas fa-icons"
         onclick={() => this.openGifPicker()}
         title={TOOLTIP_TEXT}
@@ -40,7 +40,7 @@ export default class GifPickerButton extends Component<IGifPickerButtonAttrs> {
   }
 
   openGifPicker() {
-    console.debug('[fw-ext/gif-picker] Opening GIF picker modal from toolbar');
+    console.debug('[fw27/gif-pocket] Opening GIF picker modal from toolbar');
 
     const { composer, onGifSelect } = this.attrs;
 

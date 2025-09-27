@@ -1,6 +1,6 @@
-# Gif Picker
+# Gif Pocket
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fw-ext/gif-picker.svg)](https://packagist.org/packages/fw-ext/gif-picker) [![Total Downloads](https://img.shields.io/packagist/dt/fw-ext/gif-picker.svg)](https://packagist.org/packages/fw-ext/gif-picker)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fw27/gif-pocket.svg)](https://packagist.org/packages/fw27/gif-pocket) [![Total Downloads](https://img.shields.io/packagist/dt/fw27/gif-pocket.svg)](https://packagist.org/packages/fw27/gif-pocket)
 
 A [Flarum](https://flarum.org) extension. A GIF picker for Flarum.
 
@@ -22,5 +22,5 @@ php flarum cache:clear
 
 ## Links
 
-- [Packagist](https://packagist.org/packages/fw-ext/gif-picker)
+- [Packagist](https://packagist.org/packages/fw27/gif-pocket)
 - [GitHub](https://github.com/fw27)

@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@fw-ext/gif-picker": "file:.."
+    "@fw27/gif-pocket": "file:.."
   }
 }

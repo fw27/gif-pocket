@@ -39,17 +39,17 @@ export default class GifManagementPage extends ExtensionPage {
       <div className="GifPickerAdminPage container">
         <div className="GifPickerAdminPage-section">
           <h2 className="GifPickerAdminPage-heading">
-            {String(translator.trans('fw-ext-gif-picker.admin.management.add_heading'))}
+            {String(translator.trans('fw27-gif-pocket.admin.management.add_heading'))}
           </h2>
 
           <div className="GifPickerAdminPage-fields">
             <div className="Form-group">
               <label className="Form-label">
-                {String(translator.trans('fw-ext-gif-picker.admin.management.fields.title_label'))}
+                {String(translator.trans('fw27-gif-pocket.admin.management.fields.title_label'))}
               </label>
               <input
                 className="FormControl"
-                placeholder={String(translator.trans('fw-ext-gif-picker.admin.management.fields.title_placeholder'))}
+                placeholder={String(translator.trans('fw27-gif-pocket.admin.management.fields.title_placeholder'))}
                 value={this.newGif.title}
                 oninput={(e: Event) => (this.newGif.title = (e.target as HTMLInputElement).value)}
               />
@@ -57,11 +57,11 @@ export default class GifManagementPage extends ExtensionPage {
 
             <div className="Form-group">
               <label className="Form-label">
-                {String(translator.trans('fw-ext-gif-picker.admin.management.fields.category_label'))}
+                {String(translator.trans('fw27-gif-pocket.admin.management.fields.category_label'))}
               </label>
               <input
                 className="FormControl"
-                placeholder={String(translator.trans('fw-ext-gif-picker.admin.management.fields.category_placeholder'))}
+                placeholder={String(translator.trans('fw27-gif-pocket.admin.management.fields.category_placeholder'))}
                 value={this.newGif.category}
                 oninput={(e: Event) => (this.newGif.category = (e.target as HTMLInputElement).value)}
               />
@@ -69,11 +69,11 @@ export default class GifManagementPage extends ExtensionPage {
 
             <div className="Form-group">
               <label className="Form-label">
-                {String(translator.trans('fw-ext-gif-picker.admin.management.fields.url_label'))}
+                {String(translator.trans('fw27-gif-pocket.admin.management.fields.url_label'))}
               </label>
               <input
                 className="FormControl"
-                placeholder={String(translator.trans('fw-ext-gif-picker.admin.management.fields.url_placeholder'))}
+                placeholder={String(translator.trans('fw27-gif-pocket.admin.management.fields.url_placeholder'))}
                 value={this.newGif.url}
                 oninput={(e: Event) => (this.newGif.url = (e.target as HTMLInputElement).value)}
               />
@@ -85,8 +85,8 @@ export default class GifManagementPage extends ExtensionPage {
               {String(
                 translator.trans(
                   this.editingId
-                    ? 'fw-ext-gif-picker.admin.management.fields.update_button'
-                    : 'fw-ext-gif-picker.admin.management.fields.submit_button'
+                    ? 'fw27-gif-pocket.admin.management.fields.update_button'
+                    : 'fw27-gif-pocket.admin.management.fields.submit_button'
                 )
               )}
             </Button>
@@ -97,7 +97,7 @@ export default class GifManagementPage extends ExtensionPage {
                 onclick={() => this.cancelEditing()}
                 disabled={this.loading}
               >
-                {String(translator.trans('fw-ext-gif-picker.admin.management.fields.cancel_button'))}
+                {String(translator.trans('fw27-gif-pocket.admin.management.fields.cancel_button'))}
               </Button>
             ) : null}
           </div>
@@ -105,26 +105,26 @@ export default class GifManagementPage extends ExtensionPage {
 
         <div className="GifPickerAdminPage-section">
           <h2 className="GifPickerAdminPage-heading">
-            {String(translator.trans('fw-ext-gif-picker.admin.management.list_heading'))}
+            {String(translator.trans('fw27-gif-pocket.admin.management.list_heading'))}
           </h2>
 
           {loadingInitial ? (
             <div className="GifPickerAdminPage-status GifPickerAdminPage-status--loading">
-              {String(translator.trans('fw-ext-gif-picker.admin.management.loading'))}
+              {String(translator.trans('fw27-gif-pocket.admin.management.loading'))}
             </div>
           ) : isEmpty ? (
             <div className="GifPickerAdminPage-status GifPickerAdminPage-status--empty">
-              {String(translator.trans('fw-ext-gif-picker.admin.management.empty'))}
+              {String(translator.trans('fw27-gif-pocket.admin.management.empty'))}
             </div>
           ) : (
             <div className="GifPickerAdminPage-tableWrapper">
               <table className="Table GifPickerAdminPage-table">
                 <thead>
                   <tr>
-                    <th>{String(translator.trans('fw-ext-gif-picker.admin.management.table.title'))}</th>
-                    <th>{String(translator.trans('fw-ext-gif-picker.admin.management.table.category'))}</th>
-                    <th>{String(translator.trans('fw-ext-gif-picker.admin.management.table.preview'))}</th>
-                    <th>{String(translator.trans('fw-ext-gif-picker.admin.management.table.actions'))}</th>
+                    <th>{String(translator.trans('fw27-gif-pocket.admin.management.table.title'))}</th>
+                    <th>{String(translator.trans('fw27-gif-pocket.admin.management.table.category'))}</th>
+                    <th>{String(translator.trans('fw27-gif-pocket.admin.management.table.preview'))}</th>
+                    <th>{String(translator.trans('fw27-gif-pocket.admin.management.table.actions'))}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,14 +136,14 @@ export default class GifManagementPage extends ExtensionPage {
 
                     return (
                       <tr key={id || index}>
-                        <td>{title || String(translator.trans('fw-ext-gif-picker.admin.management.table.untitled'))}</td>
-                        <td>{category || String(translator.trans('fw-ext-gif-picker.admin.management.table.category_empty'))}</td>
+                        <td>{title || String(translator.trans('fw27-gif-pocket.admin.management.table.untitled'))}</td>
+                        <td>{category || String(translator.trans('fw27-gif-pocket.admin.management.table.category_empty'))}</td>
                         <td className="GifPickerAdminPage-tablePreviewCell">
                           {url ? (
                             <img
                               className="GifPickerAdminPage-thumb"
                               src={url}
-                              alt={title || String(translator.trans('fw-ext-gif-picker.admin.management.table.preview'))}
+                              alt={title || String(translator.trans('fw27-gif-pocket.admin.management.table.preview'))}
                             />
                           ) : (
                             <span className="GifPickerAdminPage-noPreview">—</span>
@@ -155,14 +155,14 @@ export default class GifManagementPage extends ExtensionPage {
                             onclick={() => this.startEditing(gif, id)}
                             disabled={this.loading && this.editingId !== id}
                           >
-                            {String(translator.trans('fw-ext-gif-picker.admin.management.actions.edit'))}
+                            {String(translator.trans('fw27-gif-pocket.admin.management.actions.edit'))}
                           </Button>
                           <Button
                             className="Button Button--danger"
                             onclick={() => this.deleteGif(id)}
                             loading={this.loading && this.editingId === id}
                           >
-                            {String(translator.trans('fw-ext-gif-picker.admin.management.actions.delete'))}
+                            {String(translator.trans('fw27-gif-pocket.admin.management.actions.delete'))}
                           </Button>
                         </td>
                       </tr>
@@ -192,11 +192,11 @@ export default class GifManagementPage extends ExtensionPage {
           .filter((gif: any) => gif);
       })
       .catch((error) => {
-        console.error('[fw-ext/gif-picker] Failed to load global GIFs', error);
+        console.error('[fw27/gif-pocket] Failed to load global GIFs', error);
         this.gifs = [];
         app.alerts.show({
           type: 'error',
-          content: app.translator.trans('fw-ext-gif-picker.admin.management.load_error'),
+          content: app.translator.trans('fw27-gif-pocket.admin.management.load_error'),
         });
       })
       .finally(() => {
@@ -209,7 +209,7 @@ export default class GifManagementPage extends ExtensionPage {
     const translator = app.translator;
 
     if (!this.newGif.url.trim()) {
-      alert(String(translator.trans('fw-ext-gif-picker.admin.management.fields.url_required')));
+      alert(String(translator.trans('fw27-gif-pocket.admin.management.fields.url_required')));
       return;
     }
 
@@ -267,10 +267,10 @@ export default class GifManagementPage extends ExtensionPage {
         this.resetForm();
       })
       .catch((error) => {
-        console.error('[fw-ext/gif-picker] Failed to update global GIF', error);
+        console.error('[fw27/gif-pocket] Failed to update global GIF', error);
         app.alerts.show({
           type: 'error',
-          content: app.translator.trans('fw-ext-gif-picker.admin.management.update_error'),
+          content: app.translator.trans('fw27-gif-pocket.admin.management.update_error'),
         });
       })
       .finally(() => {
@@ -295,10 +295,10 @@ export default class GifManagementPage extends ExtensionPage {
         this.loadGifs();
       })
       .catch((error) => {
-        console.error('[fw-ext/gif-picker] Failed to delete global GIF', error);
+        console.error('[fw27/gif-pocket] Failed to delete global GIF', error);
         app.alerts.show({
           type: 'error',
-          content: app.translator.trans('fw-ext-gif-picker.admin.management.delete_error'),
+          content: app.translator.trans('fw27-gif-pocket.admin.management.delete_error'),
         });
       })
       .finally(() => {
@@ -329,7 +329,7 @@ export default class GifManagementPage extends ExtensionPage {
     const base = (app.data && app.data.apiUrl) || (app.forum && typeof app.forum.attribute === 'function' ? app.forum.attribute('apiUrl') : undefined);
 
     if (!base) {
-      throw new Error('[fw-ext/gif-picker] Unable to determine API URL in admin context');
+      throw new Error('[fw27/gif-pocket] Unable to determine API URL in admin context');
     }
 
     return `${base}${path}`;
